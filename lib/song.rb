@@ -23,6 +23,12 @@ class Song
     create_song
   end
 
+  def self.find_by_name
+    @@all.each do |songs|
+      
+    end
+  end
+
   def self.all
     @@all
   end
