@@ -40,6 +40,18 @@ class Song
     end
   end
 
+  def self.alphabetical
+    temp_array1 = []
+    temp_array2 = []
+    @@all.each do |songs|
+      temp_array1 << songs.name
+    end
+    temp_array1 = temp_array1.sort
+    temp_array1.each do |names|
+      temp_array2 << self.find_by_name(names)
+    end
+  end
+
   def self.all
     @@all
   end
