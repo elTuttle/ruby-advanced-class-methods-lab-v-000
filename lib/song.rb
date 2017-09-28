@@ -57,8 +57,9 @@ class Song
 
   def self.new_from_filename(name)
     temp_name = name.scan(/^[a-zA-Z0-9_\s-]+/) #slightly modded version of regex formula Paul Fox's formula: http://regexlib.com/REDetails.aspx?regexp_id=507
+    temp_name.split(" - ")
   end
-    
+
   def self.all
     @@all
   end
