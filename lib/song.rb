@@ -61,7 +61,7 @@ class Song
     new_song = self.create
     new_song.name = name_artist_array[1]
     new_song.artist_name = name_artist_array[0]
-    
+
   end
 
   def self.all
