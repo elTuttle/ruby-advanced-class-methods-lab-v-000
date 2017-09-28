@@ -4,7 +4,7 @@ class Song
 
   def self.create
     create_song = self.new
-    create_song
+    create_song.name
   end
 
   def self.all
