@@ -50,6 +50,7 @@ class Song
     temp_array1.each do |names|
       temp_array2 << self.find_by_name(names)
     end
+    temp_array2
   end
 
   def self.all
