@@ -63,6 +63,7 @@ class Song
     filename_song = self.new
     filename_song.name = song_name
     filename_song.artist_name = artist_name
+    @@all << filename_song
     filename_song
   end
 
@@ -80,9 +81,9 @@ class Song
   end
 
   def self.destroy_all
-    
+    @@all = []
   end
-    
+
   def self.all
     @@all
   end
