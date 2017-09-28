@@ -56,11 +56,11 @@ class Song
   end
 
   def self.new_from_filename(name)
-    temp_name = name.scan(/^[a-zA-Z0-9_\s-]+/).join() #slightly modded version of regex formula Paul Fox's formula: http://regexlib.com/REDetails.aspx?regexp_id=507
+    temp_name = name.scan(/^[a-zA-Z0-9_\s-]+/).join #slightly modded version of regex formula Paul Fox's formula: http://regexlib.com/REDetails.aspx?regexp_id=507
     name_artist_array = temp_name.split(" - ")
     new_song = self.create
-    new_song.name = name_artist_array[1]
-    new_song.artist_name = name_artist_array[0]
+    new_song.name = name_artist_array[0]
+    new_song.artist_name = name_artist_array[1]
 
   end
 
