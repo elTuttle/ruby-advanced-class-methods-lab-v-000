@@ -60,7 +60,10 @@ class Song
     name_artist_array = temp_name.split(" - ")
     self.name = name_artist_array[1]
     self.artist_name = name_artist_array[0]
+  end
 
+  def name=(name)
+    @name = name
   end
 
   def self.all
