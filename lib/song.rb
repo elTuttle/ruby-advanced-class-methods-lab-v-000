@@ -74,10 +74,15 @@ class Song
     filename_song = self.new
     filename_song.name = song_name
     filename_song.artist_name = artist_name
+    @@all << filename_song
     filename_song.save
     filename_song
   end
 
+  def self.destroy_all
+    
+  end
+    
   def self.all
     @@all
   end
