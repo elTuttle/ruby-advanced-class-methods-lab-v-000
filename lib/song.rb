@@ -47,8 +47,10 @@ class Song
       temp_array1 << songs.name
     end
     temp_array1 = temp_array1.sort
-    temp_array1.each do |names|
-      temp_array2 << self.find_by_name(names)
+    temp_array1.each do |names|\
+      if !temp_array2.include?(name)
+        temp_array2 << self.find_by_name(names)
+      end
     end
     temp_array2
   end
